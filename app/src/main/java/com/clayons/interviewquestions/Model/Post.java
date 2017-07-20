@@ -2,9 +2,6 @@ package com.clayons.interviewquestions.Model;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by jaychung on 5/31/16.
- */
 public class Post {
     @SerializedName("userId")
     Long userId;

@@ -16,26 +16,26 @@
         android:padding="@dimen/small_padding">
 
         <ImageView
-            android:id="@+id/ivAvatarPerson"
+            android:id="@+id/Viewholder_IV_AvatarPerson"
             android:layout_width="@dimen/avatar_size"
             android:layout_height="@dimen/avatar_size"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/tiny_margin"/>
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/Viewholder_TV_Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
             android:layout_marginLeft="@dimen/small_margin"
             android:layout_centerInParent="true"
-            android:layout_toRightOf="@id/ivAvatarPerson"
+            android:layout_toRightOf="@id/Viewholder_IV_AvatarPerson"
             tools:text="John"
             tools:ignore="RtlHardcoded" />
 
         <ImageView
-            android:id="@+id/ivIsLiked"
+            android:id="@+id/Viewholder_IV_IsLiked"
             android:layout_width="@dimen/like_size"
             android:layout_height="@dimen/like_size"
             android:layout_gravity="center"

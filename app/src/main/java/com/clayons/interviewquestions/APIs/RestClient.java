@@ -1,6 +1,6 @@
 package com.clayons.interviewquestions.APIs;
 
-import com.clayons.interviewquestions.Constants;
+import com.clayons.interviewquestions.Utility.Constants;
 
 import retrofit.RestAdapter;
 
