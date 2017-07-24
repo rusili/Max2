@@ -7,13 +7,14 @@ import java.util.List;
 
 public class StaticPersons implements MainInterface.Model {
 	private static StaticPersons staticPersons;
-	private List<Person> listOfPersons = new ArrayList<>();
+	private List <Person> listOfPersons = new ArrayList <>();
 	private Person savedPerson;
 
-	private StaticPersons (){}
+	private StaticPersons () {
+	}
 
-	public static StaticPersons getPersonStatic(){
-		if (staticPersons == null){
+	public static StaticPersons getPersonStatic () {
+		if (staticPersons == null) {
 			staticPersons = new StaticPersons();
 		}
 		return staticPersons;
@@ -24,16 +25,33 @@ public class StaticPersons implements MainInterface.Model {
 		this.listOfPersons = personsList;
 	}
 
+	public Person getPerson(int position){
+		return listOfPersons.get(position);
+	}
+
+	public void updatePerson (int position, boolean isLiked) {
+		listOfPersons.get(position).setIsLiked(isLiked);
+	}
+
 	@Override
-	public List <Person> getPersons () {
+	public List <Person> getPersonList () {
 		return listOfPersons;
 	}
 
-	public void savePerson(Person person){
+	@Override
+	public void addPosts (Post[] postsResponse) {
+		for (int i = 0; i < postsResponse.length; i++) {
+			if (listOfPersons.size() > postsResponse[i].getUserId()) {
+				listOfPersons.get(((int) (long) (postsResponse[i].getUserId())) - 1).addPost(postsResponse[i]);
+			}
+		}
+	}
+
+	public void savePerson (Person person) {
 		this.savedPerson = person;
 	}
 
-	public Person getSavedPerson(){
+	public Person getSavedPerson () {
 		return savedPerson;
 	}
 }

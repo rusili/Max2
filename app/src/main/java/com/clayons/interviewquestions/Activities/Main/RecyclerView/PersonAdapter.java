@@ -11,8 +11,8 @@ import com.clayons.interviewquestions.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersonAdapter extends RecyclerView.Adapter{
-	List<Person> listOfPersons = new ArrayList<>();
+public class PersonAdapter extends RecyclerView.Adapter {
+	List <Person> listOfPersons = new ArrayList <>();
 
 	public PersonAdapter (List <Person> listOfPersons) {
 		this.listOfPersons = listOfPersons;
@@ -21,8 +21,8 @@ public class PersonAdapter extends RecyclerView.Adapter{
 	@Override
 	public RecyclerView.ViewHolder onCreateViewHolder (ViewGroup parent, int viewType) {
 		LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-		View view = layoutInflater.inflate(R.layout.item_person_summary, parent, false);
-		PersonViewholder personViewholder = new PersonViewholder(view);
+		View viewViewholderPerson = layoutInflater.inflate(R.layout.viewholder_person, parent, false);
+		PersonViewholder personViewholder = new PersonViewholder(viewViewholderPerson);
 
 		return personViewholder;
 	}
@@ -30,7 +30,7 @@ public class PersonAdapter extends RecyclerView.Adapter{
 	@Override
 	public void onBindViewHolder (RecyclerView.ViewHolder holder, int position) {
 		PersonViewholder personViewholder = (PersonViewholder) holder;
-		personViewholder.bind(listOfPersons.get(position));
+		personViewholder.bind(listOfPersons.get(position), position);
 	}
 
 	@Override

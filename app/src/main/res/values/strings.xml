@@ -1,9 +1,18 @@
 <resources>
-    <string name="app_name">InterviewQuestions</string>
+
+    <!-- Main -->
+    <string name="app_name">Max2 Assessment</string>
+    <string name="main_activity">Users</string>
+    <string name="detail_view">Profile</string>
+
+    <!-- Person -->
     <string name="liked">Liked</string>
     <string name="like">Like</string>
     <string name="name_label">Name</string>
     <string name="age_label">Age</string>
     <string name="phone_label">Phone</string>
     <string name="persons_label">Persons</string>
+    <string name="posts_label">Posts</string>
+
+
 </resources>

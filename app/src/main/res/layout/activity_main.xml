@@ -6,7 +6,7 @@
     tools:context=".Activities.Main.MainActivity">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/Recyclerview_Persons"
+        android:id="@+id/Activity_Main_Recyclerview_Persons"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
